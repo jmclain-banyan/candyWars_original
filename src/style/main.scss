@@ -1,0 +1,399 @@
+@font-face {
+  font-family: SpicyRice;
+  src: url(./font/SpicyRice-Regular.ttf);
+}
+
+@font-face {
+  font-family: Slacky;
+  src: url(./font/Slackey.ttf);
+}
+
+@font-face {
+  font-family: Rum;
+  src: url(./font/RumRaisin-Regular.ttf);
+}
+
+@font-face {
+  font-family: Peralta;
+  src: url(./font/Peralta-Regular.ttf);
+}
+
+@font-face {
+  font-family: Hanna;
+  src: url(./font/BM-HANNA.ttf);
+}
+
+@font-face {
+  font-family: Chewy;
+  src: url(./font/Chewy.ttf);
+}
+
+@font-face {
+  font-family: Berkshire;
+  src: url(./font/BerkshireSwash-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  background: 
+  linear-gradient(to bottom, transparent 10%, rgb(205, 229, 70) 65%, blue 110%),
+  repeating-linear-gradient(45deg, white 0px, white 10px, red 10px, red 20px);
+
+  h1 {
+    margin: 0;
+    padding: 6px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.8));
+  }
+  
+  span {
+
+    &:nth-child(1) {
+      color: rgb(246, 64, 246);
+      font-family: SpicyRice;
+      font-size: 3rem;
+    }
+
+    &:nth-child(2) {
+      color: rgb(28, 224, 250);
+      font-family: Slacky;
+      font-size: 2.6rem;
+    }
+  }
+}
+
+.HUD-wrapper {
+  border: 1px dotted black;
+  overflow: hidden;
+  background: rgb(24, 24, 24);
+  color: white;
+  padding: 3px 5px;
+
+  .player-stats {
+    float: left;
+
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+      padding: 1px 0;
+
+      &:nth-child(1) {
+        span {
+          color: rgb(92, 255, 47)
+        }
+      }
+
+      &:nth-child(2) {
+        span {
+          color: rgb(253, 121, 143);
+        }
+      }
+      
+      &:nth-child(3) {
+        span {
+          color: rgb(116, 149, 248);
+        }
+      }
+
+      &:nth-child(4) {
+        span {
+          color: rgb(250, 170, 23);
+        }
+      }
+
+      &:nth-child(5) {
+        span {
+          color: rgb(246, 107, 246);
+        }
+      }
+    }
+  }
+  
+  .player-inventory {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.7rem;
+    text-align: end;
+
+    li {
+      color: rgb(236, 123, 236);
+
+      span {
+
+        &:nth-child(1) {
+          color: rgb(77, 190, 126);
+        }
+
+        &:nth-child(2) {
+          color: rgb(134, 183, 223);
+        }
+      }
+    }
+  }
+}
+
+.location-btns-wrapper {
+  width: 100%;
+  text-align: center;
+  background: rgb(231, 231, 231);
+  padding: 0 0 4px;
+  
+  button {
+    margin: 4px 4px 2px;
+    padding: 4px 6px;
+    font-family: Rum;
+    font-size: 1.2rem;
+    background: rgb(250, 178, 44);
+    border-radius: 30%;
+    border: 2px solid rgb(96, 67, 241);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.65);
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      width: (93% / 3);
+    }
+
+    &:nth-child(4), &:nth-child(5) {
+      width: (93% / 2);
+    }    
+  }
+}
+
+.market-container {
+  background: rgb(92, 92, 92);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5px 0 0;
+
+  .product-wrapper {
+    // border: 1px dotted black;
+    background: rgb(236, 235, 235);
+    text-align: center;
+    width: 48%;
+    padding: 3px;
+    margin: 0 0 5px;
+
+    h3 {
+      margin: 0;
+      font-family: Peralta;
+      font-size: 1.25rem;
+    }
+
+    input {
+      width: 35px;
+      margin: 0 5px 0;
+      font-family: Chewy;
+      font-size: 1rem;
+      text-align: center;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 3px;
+      background: rgb(27, 27, 27);
+      color: rgb(0, 253, 0);
+    }
+
+    button {
+      border: 1px solid rgb(22, 22, 22);
+      border-radius: 3px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .buy-wrapper, .sale-wrapper {
+      margin: 9px 0 0;
+      padding: 4px 0 0;
+      // border: 2px solid rgb(198, 65, 215);
+      background: rgb(212, 231, 148);
+      border-radius: 5px;
+      box-shadow: 0px 0px 4px rgba(0,0,0,0.65);
+    }
+
+    .product-info, .buy-info, .sale-info {
+      font-family: Hanna;
+    }
+    
+    .buy-info, .sale-info {
+      padding: 5px 0;
+      font-size: 0.85rem;
+    }
+
+    .product-info {
+      font-size: 0.9rem;
+    }
+
+    .incrementBtn, .decrementBtn {
+      width: 27px;
+      height: 27px;
+    }
+
+    .actionBtn {
+      width: 45px;
+      height: 27px;
+      margin-left: 15px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+
+      &:disabled {
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+.fight-modal-container {
+  position: fixed;
+  background: rgba(0,0,0,0.65);
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+
+  .fight-modal {
+    position: absolute;
+    background: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 45%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &_health {
+      border: 1px dotted black;
+
+      span {
+        margin: 0 10px 0;
+      }
+      
+    }
+
+    &-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      background: transparent;
+      margin: 5px;
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+
+    .fight-action-btns {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+
+      button {
+
+        &:nth-child(1), &:nth-child(2) {
+          margin: 15px;
+          width: (70% / 2)
+        }
+      }
+    }
+  }
+}
+
+.store-modal-container {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.65);
+  z-index: 101;
+
+  .store-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(253, 123, 253);
+    height: 90%;
+    width: 70%;
+    padding: 40px 5px 12px;
+
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 5px;
+      border: none;
+      background: transparent;
+    }
+
+    div {
+      width: 100%;
+      height: (97% / 9);
+      text-align: center;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      background: rgb(255, 255, 255);
+      margin: 3px 0 0;
+
+      p {
+        font-family: SpicyRice;
+        font-size: 1.2rem;
+        margin: 5px 0;
+      }
+
+      button {
+        font-family: Chewy;
+        font-size: 1.2rem;
+        background: rgb(0, 187, 0);
+        border: 1px solid black;
+        border-radius: 5px;
+
+        &:disabled {
+          background: rgb(231, 0, 0);
+          color: rgb(22, 22, 22);
+        }
+      }
+    }
+  }
+}
+
+.shopping-btns-wrapper {
+  margin: 8px 0;
+  text-align: center;
+  background: rgb(97, 97, 97);
+
+  button {
+    margin: 2px 8px;
+    width: (90% / 2);
+    padding: 4px;
+    border-radius: 5px;
+    font-family: Rum;
+    font-size: 1.2rem;
+    border: none;
+
+    &:nth-child(1) {
+      background: rgb(80, 174, 54);
+    }
+
+    &:nth-child(2) {
+      background: rgb(219, 58, 58);
+      color: white;
+    }
+  }
+}

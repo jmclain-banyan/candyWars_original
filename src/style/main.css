@@ -1,0 +1,401 @@
+@font-face {
+  font-family: SpicyRice;
+  src: url(./font/SpicyRice-Regular.ttf);
+}
+
+@font-face {
+  font-family: Slacky;
+  src: url(./font/Slackey.ttf);
+}
+
+@font-face {
+  font-family: Rum;
+  src: url(./font/RumRaisin-Regular.ttf);
+}
+
+@font-face {
+  font-family: Peralta;
+  src: url(./font/Peralta-Regular.ttf);
+}
+
+@font-face {
+  font-family: Hanna;
+  src: url(./font/BM-HANNA.ttf);
+}
+
+@font-face {
+  font-family: Chewy;
+  src: url(./font/Chewy.ttf);
+}
+
+@font-face {
+  font-family: Berkshire;
+  src: url(./font/BerkshireSwash-Regular.ttf);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), color-stop(65%, #cde546), color-stop(110%, blue)), repeating-linear-gradient(45deg, white 0px, white 10px, red 10px, red 20px);
+  background: linear-gradient(to bottom, transparent 10%, #cde546 65%, blue 110%), repeating-linear-gradient(45deg, white 0px, white 10px, red 10px, red 20px);
+}
+
+header h1 {
+  margin: 0;
+  padding: 6px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.8));
+}
+
+header span:nth-child(1) {
+  color: #f640f6;
+  font-family: SpicyRice;
+  font-size: 3rem;
+}
+
+header span:nth-child(2) {
+  color: #1ce0fa;
+  font-family: Slacky;
+  font-size: 2.6rem;
+}
+
+.HUD-wrapper {
+  border: 1px dotted black;
+  overflow: hidden;
+  background: #181818;
+  color: white;
+  padding: 3px 5px;
+}
+
+.HUD-wrapper .player-stats {
+  float: left;
+}
+
+.HUD-wrapper .player-stats p {
+  margin: 0;
+  font-size: 0.75rem;
+  padding: 1px 0;
+}
+
+.HUD-wrapper .player-stats p:nth-child(1) span {
+  color: #5cff2f;
+}
+
+.HUD-wrapper .player-stats p:nth-child(2) span {
+  color: #fd798f;
+}
+
+.HUD-wrapper .player-stats p:nth-child(3) span {
+  color: #7495f8;
+}
+
+.HUD-wrapper .player-stats p:nth-child(4) span {
+  color: #faaa17;
+}
+
+.HUD-wrapper .player-stats p:nth-child(5) span {
+  color: #f66bf6;
+}
+
+.HUD-wrapper .player-inventory {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.7rem;
+  text-align: end;
+}
+
+.HUD-wrapper .player-inventory li {
+  color: #ec7bec;
+}
+
+.HUD-wrapper .player-inventory li span:nth-child(1) {
+  color: #4dbe7e;
+}
+
+.HUD-wrapper .player-inventory li span:nth-child(2) {
+  color: #86b7df;
+}
+
+.location-btns-wrapper {
+  width: 100%;
+  text-align: center;
+  background: #e7e7e7;
+  padding: 0 0 4px;
+}
+
+.location-btns-wrapper button {
+  margin: 4px 4px 2px;
+  padding: 4px 6px;
+  font-family: Rum;
+  font-size: 1.2rem;
+  background: #fab22c;
+  border-radius: 30%;
+  border: 2px solid #6043f1;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.65);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.65);
+}
+
+.location-btns-wrapper button:nth-child(1), .location-btns-wrapper button:nth-child(2), .location-btns-wrapper button:nth-child(3) {
+  width: 31%;
+}
+
+.location-btns-wrapper button:nth-child(4), .location-btns-wrapper button:nth-child(5) {
+  width: 46.5%;
+}
+
+.market-container {
+  background: #5c5c5c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5px 0 0;
+}
+
+.market-container .product-wrapper {
+  background: #ecebeb;
+  text-align: center;
+  width: 48%;
+  padding: 3px;
+  margin: 0 0 5px;
+}
+
+.market-container .product-wrapper h3 {
+  margin: 0;
+  font-family: Peralta;
+  font-size: 1.25rem;
+}
+
+.market-container .product-wrapper input {
+  width: 35px;
+  margin: 0 5px 0;
+  font-family: Chewy;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 3px;
+  background: #1b1b1b;
+  color: #00fd00;
+}
+
+.market-container .product-wrapper button {
+  border: 1px solid #161616;
+  border-radius: 3px;
+}
+
+.market-container .product-wrapper button:focus {
+  outline: none;
+}
+
+.market-container .product-wrapper .buy-wrapper, .market-container .product-wrapper .sale-wrapper {
+  margin: 9px 0 0;
+  padding: 4px 0 0;
+  background: #d4e794;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.65);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.65);
+}
+
+.market-container .product-wrapper .product-info, .market-container .product-wrapper .buy-info, .market-container .product-wrapper .sale-info {
+  font-family: Hanna;
+}
+
+.market-container .product-wrapper .buy-info, .market-container .product-wrapper .sale-info {
+  padding: 5px 0;
+  font-size: 0.85rem;
+}
+
+.market-container .product-wrapper .product-info {
+  font-size: 0.9rem;
+}
+
+.market-container .product-wrapper .incrementBtn, .market-container .product-wrapper .decrementBtn {
+  width: 27px;
+  height: 27px;
+}
+
+.market-container .product-wrapper .actionBtn {
+  width: 45px;
+  height: 27px;
+  margin-left: 15px;
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.market-container .product-wrapper .actionBtn:disabled {
+  opacity: 0.2;
+}
+
+.fight-modal-container {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.65);
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}
+
+.fight-modal-container .fight-modal {
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 45%;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fight-modal-container .fight-modal_health {
+  border: 1px dotted black;
+}
+
+.fight-modal-container .fight-modal_health span {
+  margin: 0 10px 0;
+}
+
+.fight-modal-container .fight-modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background: transparent;
+  margin: 5px;
+}
+
+.fight-modal-container .fight-modal-close:disabled {
+  opacity: 0.6;
+}
+
+.fight-modal-container .fight-modal .fight-action-btns {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.fight-modal-container .fight-modal .fight-action-btns button:nth-child(1), .fight-modal-container .fight-modal .fight-action-btns button:nth-child(2) {
+  margin: 15px;
+  width: 35%;
+}
+
+.store-modal-container {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 101;
+}
+
+.store-modal-container .store-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fd7bfd;
+  height: 90%;
+  width: 70%;
+  padding: 40px 5px 12px;
+}
+
+.store-modal-container .store-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  border: none;
+  background: transparent;
+}
+
+.store-modal-container .store-modal div {
+  width: 100%;
+  height: 10.77778%;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: white;
+  margin: 3px 0 0;
+}
+
+.store-modal-container .store-modal div p {
+  font-family: SpicyRice;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.store-modal-container .store-modal div button {
+  font-family: Chewy;
+  font-size: 1.2rem;
+  background: #00bb00;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.store-modal-container .store-modal div button:disabled {
+  background: #e70000;
+  color: #161616;
+}
+
+.shopping-btns-wrapper {
+  margin: 8px 0;
+  text-align: center;
+  background: #616161;
+}
+
+.shopping-btns-wrapper button {
+  margin: 2px 8px;
+  width: 45%;
+  padding: 4px;
+  border-radius: 5px;
+  font-family: Rum;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.shopping-btns-wrapper button:nth-child(1) {
+  background: #50ae36;
+}
+
+.shopping-btns-wrapper button:nth-child(2) {
+  background: #db3a3a;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
